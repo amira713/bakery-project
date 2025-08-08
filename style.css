@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{  
+    font-family: "Nunito", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+a{
+    color: rgb(90, 8, 8);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+}
+body{
+       background-image: linear-gradient(to right, #111216, #b5956b, #ebe3e5);
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+}
+.container{
+    background-image: linear-gradient(to right, #111216, #b5956bb2, #ebe3e554),
+    url(/images/tiramisu.webp);
+    background-size: cover;
+    width: 90%;
+    height: 85%;
+    padding: 20px;
+}
+header{
+     display: flex;
+    justify-content: space-between;
+}
+.container:hover{
+    background-image: linear-gradient(to right, #111216, #b5956b63, transparent),
+    url(/images/tiramisu.webp);
+}
+.logo img{
+    width: 20%;   
+}
+ul{
+    list-style: none;
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+    padding-top: 25px;
+}
+ul a{
+    border-bottom: 2px solid transparent;
+}
+ul a:hover {
+    border-bottom-color: rgb(90, 8, 8);
+}
+.content{
+    background-color:rgba(250, 235, 215, 0.596);
+    width : 37%;
+    padding: 30px;
+    color:rgb(90, 8, 8);
+    margin: 30px 20px;
+    border-radius: 20px;
+}
+p{
+    margin: 10px 0; 
+    font-size: 18px;
+}
+button{
+    font-size: 30px;
+    padding: 5px 10px;
+    border-color:  rgb(90, 8, 8);
+    background-color:rgb(247, 232, 213);
+    font-weight: bold;
+    color: rgb(90, 8, 8);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: #ffbd67;
+    color:rgb(90, 8, 8);
+    cursor: pointer;
+}
+
