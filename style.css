@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 *{  
+    box-sizing:border-box;
     font-family: "Nunito", sans-serif;
     padding: 0;
     margin: 0;
@@ -9,7 +10,12 @@ a{
     color: rgb(90, 8, 8);
     text-decoration: none;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.25); /* شفافية ثابتة */
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    z-index: 10; /* يفضل فوق أي خلفية */
+    padding: 5px 10px;
 }
 body{
        background-image: linear-gradient(to right, #111216, #b5956b, #ebe3e5);
@@ -22,59 +28,219 @@ body{
     background-image: linear-gradient(to right, #111216, #b5956bb2, #ebe3e554),
     url(/images/tiramisu.webp);
     background-size: cover;
-    width: 90%;
-    height: 85%;
+    width: 95%;
+    height: 90%;
     padding: 20px;
+    transition: all 0.3s ease;
 }
 header{
      display: flex;
     justify-content: space-between;
+
 }
 .container:hover{
     background-image: linear-gradient(to right, #111216, #b5956b63, transparent),
     url(/images/tiramisu.webp);
 }
-.logo img{
-    width: 20%;   
+.logo{
+    width: 12%;   
 }
 ul{
     list-style: none;
     display: flex;
-    width: 60%;
+    width: 50%;
     justify-content: space-evenly;
-    padding-top: 25px;
+    padding-top: 20px;
+
 }
 ul a{
     border-bottom: 2px solid transparent;
 }
 ul a:hover {
-    border-bottom-color: rgb(90, 8, 8);
+    border: solid 2px rgb(90, 8, 8);
 }
 .content{
     background-color:rgba(250, 235, 215, 0.596);
-    width : 37%;
-    padding: 30px;
+    width : 40%;
+    padding: 20px;
     color:rgb(90, 8, 8);
-    margin: 30px 20px;
+    margin: 50px 10px;
     border-radius: 20px;
+}
+h1{
+    font-size: 36px;
 }
 p{
     margin: 10px 0; 
-    font-size: 18px;
+    font-size: 22px;
+}
+.offer{
+    font-size: 20px;
+    font-weight: bold;
+    color: #cc1d1d; /* لون جذاب */
+    margin-top: 10px;
 }
 button{
     font-size: 30px;
-    padding: 5px 10px;
+    padding: 5px 15px;
     border-color:  rgb(90, 8, 8);
-    background-color:rgb(247, 232, 213);
+    background-color:#ffb84d;
     font-weight: bold;
     color: rgb(90, 8, 8);
     border-radius: 10px;
     margin-top: 10px;
+    border: none;
+    transition: all 0.3s ease;
 }
 button:hover{
-    background-color: #ffbd67;
-    color:rgb(90, 8, 8);
     cursor: pointer;
+    background-color: #ff9900; /* أغمق عند المرور */
+    transform: scale(1.05); /* يكبر شوية لجذب الانتباه */
 }
 
+@media (min-width: 801px){
+    .logo{
+
+        width : 15%;
+    }
+    .container{
+    width: 95%;
+    height: 90%;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+    .content{
+        width: 40%;
+        padding:20px;
+        margin: 50px 10px;
+        text-align: left;
+    }
+    ul{
+        flex-direction: row;
+        width: 50%;
+        justify-content: space-evenly;
+        padding-top: 20px;
+    }
+    h1{
+        font-size: 36px;
+    }
+    p{
+        font-size: 22px;
+    }
+    .offer{
+        font-size: 22px;
+    }
+    button{
+        font-size: 30px;
+        padding: 5px 15px;
+    }
+}
+
+@media (max-width: 800px) { 
+.logo{
+    width: 40%;
+}
+h1{
+    font-size: 28px;
+}
+h2{
+    font-size: 20px;
+}
+p{
+    font-size: 18px;
+}
+.offer{
+    font-size: 20px;
+}
+.container{
+    background-image: linear-gradient(to right, #111216, #b5956bb2, #ebe3e554),
+    url(/images/tiramisu2.webp);
+    padding: 5px; 
+    width: 95%;
+    height: 95%
+}
+.container:hover{
+    background-image: linear-gradient(to right, #111216, #b5956b63, transparent),
+    url(/images/tiramisu2.webp);
+}
+.content{
+    width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center
+}
+button{
+    font-size: 20px;
+    padding: 5px 10px;
+}
+header{
+    flex-direction: column;
+    align-items: center;
+}
+ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding-top: 20px;
+}
+a{
+    font-size: 18px;
+    padding: 2.5px 5px;
+    border-radius: 5px;
+}
+}
+@media (max-width: 480px) { 
+.logo{
+    width: 40%;
+}
+h1{
+    font-size: 28px;
+}
+h2{
+    font-size: 20px;
+}
+p{
+    font-size: 18px;
+}
+.offer{
+    font-size: 20px;
+}
+.container{
+    background-image: linear-gradient(to right, #111216, #b5956bb2, #ebe3e554),
+    url(/images/tiramisu2.webp);
+    padding: 5px; 
+    width: 95%;
+    height: 95%
+}
+.container:hover{
+    background-image: linear-gradient(to right, #111216, #b5956b63, transparent),
+    url(/images/tiramisu2.webp);
+}
+.content{
+    width: 90%;
+    padding: 10px;
+    margin: 50px auto;
+    text-align: center
+}
+button{
+    font-size: 20px;
+    padding: 5px 10px;
+}
+header{
+    flex-direction: column;
+    align-items: center;
+}
+ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding-top: 5px;
+}
+a{
+    font-size: 18px;
+    padding: 2.5px 5px;
+    border-radius: 5px;
+}
+}
