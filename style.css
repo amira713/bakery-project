@@ -142,6 +142,9 @@ button:hover{
 }
 
 @media (max-width: 800px) { 
+    body{
+       background-image: linear-gradient(to right, #111216c9, #b5956b, #ebe3e5);
+    }
 a{
     display: flex;
     justify-content: center;
@@ -163,14 +166,14 @@ p{
     font-size: 20px;
 }
 .container{
-    background-image: linear-gradient(to right, #111216, #b5956bb2, #ebe3e554),
+    background-image: linear-gradient(to right, #111216c9 #b5956bb2, #ebe3e554),
     url(/images/tiramisu2.webp);
     padding: 5px; 
     width: 95%;
     height: 95%;
 }
 .container:hover{
-    background-image: linear-gradient(to right, #111216, #b5956b63, transparent),
+    background-image: linear-gradient(to right, #4b4e589a, #b5956b63, transparent),
     url(/images/tiramisu2.webp);
 }
 .content{
