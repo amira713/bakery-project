@@ -6,17 +6,6 @@
     padding: 0;
     margin: 0;
 }
-a{
-    color: rgb(90, 8, 8);
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-    background-color: rgba(255, 255, 255, 0.25); /* شفافية ثابتة */
-    backdrop-filter: blur(5px);
-    border-radius: 10px;
-    z-index: 10; /* يفضل فوق أي خلفية */
-    padding: 5px 10px;
-}
 body{
        background-image: linear-gradient(to right, #111216, #b5956b, #ebe3e5);
        height: 100vh;
@@ -33,25 +22,29 @@ body{
     padding: 20px;
     transition: all 0.3s ease;
 }
-header{
-     display: flex;
-    justify-content: space-between;
-
-}
 .container:hover{
     background-image: linear-gradient(to right, #111216, #b5956b63, transparent),
     url(/images/tiramisu.webp);
 }
-.logo{
-    width: 12%;   
-}
-ul{
-    list-style: none;
+header{
     display: flex;
-    width: 50%;
-    justify-content: space-evenly;
-    padding-top: 20px;
-
+    justify-content: space-between;
+    width: 100%;
+}
+.logo{
+    width: 100%;
+    max-width: 200px; /*لضمان عدم تمدده بشكل غير مرغوب */
+}
+.navbar a{
+    color: rgb(90, 8, 8);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.25); /* شفافية ثابتة */
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    z-index: 10; /* يفضل فوق أي خلفية */
+    padding: 5px 10px;
 }
 ul a{
     border-bottom: 2px solid transparent;
@@ -59,12 +52,22 @@ ul a{
 ul a:hover {
     border: solid 2px rgb(90, 8, 8);
 }
+ul {
+    width: 70%;
+    display : flex;
+    list-style: none;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+li{
+    list-style: none;
+}
 .content{
     background-color:rgba(250, 235, 215, 0.596);
     width : 40%;
     padding: 20px;
     color:rgb(90, 8, 8);
-    margin: 50px 10px;
+    margin: 20px 10px;
     border-radius: 20px;
 }
 h1{
@@ -99,9 +102,11 @@ button:hover{
 }
 
 @media (min-width: 801px){
-    .logo{
-
-        width : 15%;
+    header{
+    width: 90%;
+    }
+    header>a{
+    width :15%;
     }
     .container{
     width: 95%;
@@ -110,36 +115,41 @@ button:hover{
     transition: all 0.3s ease;
 }
     .content{
-        width: 40%;
+        width: 45%;
         padding:20px;
-        margin: 50px 10px;
+        margin: 20px 10px;
         text-align: left;
     }
     ul{
-        flex-direction: row;
-        width: 50%;
+        width: 100%;
         justify-content: space-evenly;
         padding-top: 20px;
+        gap: 10px;
     }
     h1{
-        font-size: 36px;
+        font-size: 40px;
     }
     p{
         font-size: 22px;
     }
     .offer{
-        font-size: 22px;
+        font-size: 26px;
     }
     button{
-        font-size: 30px;
+        font-size: 32px;
         padding: 5px 15px;
     }
 }
 
 @media (max-width: 800px) { 
-.logo{
-    width: 40%;
-}
+a{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    padding: 2.5px 5px;
+    border-radius: 5px;
+}  
+
 h1{
     font-size: 28px;
 }
@@ -157,7 +167,7 @@ p{
     url(/images/tiramisu2.webp);
     padding: 5px; 
     width: 95%;
-    height: 95%
+    height: 95%;
 }
 .container:hover{
     background-image: linear-gradient(to right, #111216, #b5956b63, transparent),
@@ -183,16 +193,12 @@ ul {
     gap: 10px;
     width: 100%;
     padding-top: 20px;
-}
-a{
-    font-size: 18px;
-    padding: 2.5px 5px;
-    border-radius: 5px;
+    margin: 20px auto;
 }
 }
 @media (max-width: 480px) { 
 .logo{
-    width: 40%;
+    width: 50%;
 }
 h1{
     font-size: 28px;
@@ -219,8 +225,8 @@ p{
 }
 .content{
     width: 90%;
-    padding: 10px;
-    margin: 50px auto;
+    padding: 15px;
+    margin: 20px auto;
     text-align: center
 }
 button{
@@ -237,10 +243,24 @@ ul {
     gap: 10px;
     width: 100%;
     padding-top: 5px;
+    margin: 5px auto;
 }
 a{
     font-size: 18px;
     padding: 2.5px 5px;
     border-radius: 5px;
 }
+}
+@keyframes moving{/*لعمل حركه بسيطه لمربع الحوار عند تحميل الشاشه لاول مره*/
+    from{
+        opacity: 0;  /* العنصر شفاف تمامًا في البداية */
+        transform: translateY(20px);/* العنصر نازل تحت بمقدار 20px */
+       }
+    to{
+        opacity: 1;  /* العنصر ظاهر بالكامل */
+        transform: translateY(0);/* العنصر في مكانه الطبيعي */
+    }
+}
+.content{ 
+   animation: moving 0.6s ease forwards;
 }
