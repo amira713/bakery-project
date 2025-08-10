@@ -13,7 +13,7 @@ This project is my first attempt at designing and developing a web page from scr
 **Mobile view:**
 ![Mobile Screenshot](images/mobile.webp)
 
-[Live Demo](https://github.com/amira713/bakery-project.git)
+[Live Demo](https://amira713.github.io/bakery-project/)
 
 ---
 
