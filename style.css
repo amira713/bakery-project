@@ -15,7 +15,7 @@ body{
 }
 .container{
     background-image: linear-gradient(to right, #111216, #b5956bb2, #ebe3e554),
-    url(/images/tiramisu.webp);
+    url(./images/tiramisu.webp);
     background-size: cover;
     width: 95%;
     height: 90%;
@@ -24,7 +24,7 @@ body{
 }
 .container:hover{
     background-image: linear-gradient(to right, #111216, #b5956b63, transparent),
-    url(/images/tiramisu.webp);
+    url(./images/tiramisu.webp);
 }
 header{
     display: flex;
@@ -167,14 +167,14 @@ p{
 }
 .container{
     background-image: linear-gradient(to right, #111216c9 #b5956bb2, #ebe3e554),
-    url(/images/tiramisu2.webp);
+    url(./images/tiramisu2.webp);
     padding: 5px; 
     width: 95%;
     height: 95%;
 }
 .container:hover{
     background-image: linear-gradient(to right, #4b4e589a, #b5956b63, transparent),
-    url(/images/tiramisu2.webp);
+    url(./images/tiramisu2.webp);
 }
 .content{
     width: 90%;
@@ -217,14 +217,14 @@ p{
 }
 .container{
     background-image: linear-gradient(to right, #111216, #b5956bb2, #ebe3e554),
-    url(/images/tiramisu2.webp);
+    url(./images/tiramisu2.webp);
     padding: 5px; 
     width: 95%;
     height: 95%
 }
 .container:hover{
     background-image: linear-gradient(to right, #111216, #b5956b63, transparent),
-    url(/images/tiramisu2.webp);
+    url(./images/tiramisu2.webp);
 }
 .content{
     width: 90%;
